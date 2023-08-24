@@ -40,13 +40,16 @@ const ScoreBoard = () => {
     <div className="absolute h-full w-full bg-[#9a9a9a4b]">
       <PageLayout />
       <div className="absolute w-[87.5vw] h-[83vh] left-[15rem] top-[10.2em] font-Nanum-Gothic overflow-scroll scrollbar-hide">
-        <div className="absolute inset-0 h-[795px] w-[88%] b-[#171cb624]">
-          <div className="absolute top-[8px] left-[13px] h-[70px] w-[84.8vw] outline outline-[#b6173f68] rounded-md ">
+        <div className="absolute inset-0 h-[795px] w-[88%] ">
+          <div className="absolute top-[8px] left-[13px] h-[70px] w-[84.8vw] outline outline-[#0000ff6a] rounded-md ">
             <h1>MONTH</h1>
             <Popup
               trigger={
                 <ProjectShoot>
-                  <button className="button absolute top-[18px] right-[20px] px-[20px] pt-[3px] text-[20px] outline outline-[#5417b698] bg-[#5417b660] text-[white] rounded-full font-semibold tracking-[2px] hover:bg-[#5417b680] hover:outline-[#5417b6dd] hover:text-[#ffffff8a] focus:text-[#ffffffcf]">
+                  <button
+                    className="button absolute top-[18px] right-[20px] px-[20px] pt-[3px] text-[20px] outline outline-[#5417b698]
+                   bg-[#5417b660] text-[white] rounded-full font-semibold tracking-[2px] hover:bg-[#5417b680] hover:outline-[#5417b6dd] hover:text-[#ffffff8a] focus:text-[#ffffffcf]"
+                  >
                     PROJECT
                   </button>
                 </ProjectShoot>
@@ -87,14 +90,18 @@ const ScoreBoard = () => {
             </Popup>
           </div>
           <div className="absolute top-[90px] h-[300px] w-full left-3 ">
-            <h1 className="absolute px-[30px] py-[79px] outline outline-[#b6173f68] rounded-md text-[22px] leading-[26px]">
+            <h1
+              className="absolute px-[30px] py-[79px] outline outline-[#0000ff6a] rounded-md text-[22px] leading-[26px] bg-[white] 
+              shadow-lg shadow-[#1d1c1cdc]"
+            >
               <p>처</p>
               <p>리</p>
               <p>업</p>
               <p>무</p>
             </h1>
             <TextareaAutosize
-              className="absolute left-[93px] outline outline-[#b6173f68] rounded-md text-[20px] text-opacity-40 text-center"
+              className="absolute left-[93px] outline outline-[#0000ff6a] rounded-md text-[20px] text-opacity-40 text-center shadow-lg
+              shadow-[#1d1c1cdc] hover:outline-[white] hover:ring-[5px] hover:ring-[white]"
               style={{
                 boxSizing: "border-box",
                 width: "80vw",
@@ -108,7 +115,7 @@ const ScoreBoard = () => {
             ></TextareaAutosize>
           </div>
           <div className="absolute top-[370px] h-[100px] w-full left-3">
-            <h1 className="absolute px-[30px] py-[5px] outline outline-[#b6173f68] rounded-md text-[22px] leading-[26px]">
+            <h1 className="absolute px-[30px] py-[5px] outline outline-[#0000ff6a] rounded-md text-[22px] leading-[26px] bg-[white] shadow-lg shadow-[#1d1c1cdc]">
               <p>미</p>
               <p>처</p>
               <p>리</p>
@@ -116,7 +123,8 @@ const ScoreBoard = () => {
               <p>무</p>
             </h1>
             <TextareaAutosize
-              className="absolute left-[93px] outline outline-[#b6173f68] rounded-md text-[20px] text-center text-opacity-40"
+              className="absolute left-[93px] outline outline-[#0000ff6a] rounded-md text-[20px] text-center text-opacity-40 shadow-lg
+              shadow-[#1d1c1cdc] hover:outline-[white] hover:ring-[5px] hover:ring-[white]"
               style={{
                 boxSizing: "border-box",
                 width: "80vw",
@@ -130,16 +138,17 @@ const ScoreBoard = () => {
             />
           </div>
           <div className="absolute top-[530px] h-[250px] w-full left-3">
-            <h1 className="absolute px-[30px] py-[46px] outline outline-[#b6173f68] rounded-md text-[22px] leading-[26px]">
-              <p>내</p>
-              <p>일</p>
+            <h1 className="absolute px-[30px] py-[46px] outline outline-[#0000ff6a] rounded-md text-[22px] leading-[26px] bg-[white] shadow-lg shadow-[#1d1c1cdc]">
               <p>진</p>
               <p>행</p>
+              <p>예</p>
+              <p>정</p>
               <p>업</p>
               <p>무</p>
             </h1>
             <TextareaAutosize
-              className="absolute left-[93px] outline outline-[#b6173f68] rounded-md text-[20px] text-opacity-40 text-center"
+              className="absolute left-[93px] outline outline-[#0000ff6a] rounded-md text-[20px] text-opacity-40 text-center shadow-lg
+              shadow-[#1d1c1cdc] hover:outline-[white] hover:ring-[5px] hover:ring-[white]"
               style={{
                 boxSizing: "border-box",
                 width: "80vw",
@@ -153,7 +162,7 @@ const ScoreBoard = () => {
             />
           </div>
         </div>
-        <Messenger />
+        {/* <Messenger /> */}
       </div>
     </div>
   );

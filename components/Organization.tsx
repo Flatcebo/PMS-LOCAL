@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
-import Popup from "reactjs-popup";
-import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+import React, { useState, useEffect } from 'react'
+import styled from 'styled-components'
+import Popup from 'reactjs-popup'
+import { FaChevronRight, FaChevronLeft } from 'react-icons/fa'
 
 const Organization = () => {
-  const [messengerIcons, setMessengerIcons] = useState(false);
+  const [messengerIcons, setMessengerIcons] = useState(false)
   const onClickHideMessenger = (e: React.MouseEvent<HTMLDivElement>) => {
-    setMessengerIcons((any) => !any);
-  };
+    setMessengerIcons(any => !any)
+  }
 
   return (
-    <div className="">
+    <div className="relative">
       {messengerIcons ? (
         <>
           <MessengerOpens className="absolute top-[0.4em] right-[15px] left-[1440px] h-[780px] w-[220px] bg-[#ffffff00] rounded-lg backdrop-blur-[3px] outline outline-[#0000ff6a] ">
@@ -115,10 +115,10 @@ const Organization = () => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default Organization;
+export default Organization
 
 const MessengerOpens = styled.div`
   animation-duration: 1.3s;
@@ -132,7 +132,7 @@ const MessengerOpens = styled.div`
       margin-left: 12.4%;
     }
   }
-`;
+`
 
 const MessengerOpens1 = styled.div`
   animation-duration: 1.3s;
@@ -149,7 +149,7 @@ const MessengerOpens1 = styled.div`
       }
     } */
   }
-`;
+`
 
 const MessengerHides = styled.div`
   animation-duration: 1.3s;
@@ -164,4 +164,4 @@ const MessengerHides = styled.div`
   @media all and (min-width: 700px) {
     display: none;
   }
-`;
+`

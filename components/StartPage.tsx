@@ -7,7 +7,7 @@ import SKtelecomLogo from "@public/SKtelecomLogo.png";
 import NHNLogo from "@public/NHNLogo.png";
 import React, { useState, useEffect } from "react";
 import LoginAccordion from "./AccordionLogin";
-import styled, { keyframes } from "styled-components";
+import Styled, { keyframes } from "styled-components";
 
 type Props = {
   number: string;
@@ -23,7 +23,12 @@ function StartPage() {
   };
 
   return (
-    <div className="absolute w-full h-full bg-gradient-to-b from-[#b6173e] via-[#cd682ed3] to-blue-500 overflow-hidden ">
+    <div
+      className="absolute w-full h-full bg-gradient-to-b 2xl:from-[#b6173e] 2xl:via-[#cd682ed3] 2xl:to-blue-500 
+      xl:from-[#b6173e] xl:via-[#cd682ed3] xl:to-blue-500 md:from-[#b6173e] md:via-green-500 md:to-green-500
+      lg:from-[#b6173e] lg:via-[#cd682ed3] lg:to-blue-500 sm:from-[#b6173e] sm:via-white sm:to-white
+      overflow-hidden"
+    >
       <SlideIn1>
         {/* via-[#e59595] */}
         <div className="flex justify-center mt-[48px] ">
@@ -32,9 +37,10 @@ function StartPage() {
               className=""
               src={headerMark}
               alt="LOGO"
-              //   layout="responsive"
-              //   sizes="(max-width: 768px) 100vw,
-              // (max-width: 1200px) 50vw,33vw"
+
+              // layout="responsive"
+              // sizes="(max-width: 768px) 100vw,
+              //  (max-width: 1200px) 50vw,33vw"
             />
           </div>
         </div>
@@ -101,7 +107,7 @@ function StartPage() {
 
 export default React.memo(StartPage);
 
-const SlideIn1 = styled.div`
+const SlideIn1 = Styled.div`
   animation-duration: 3s;
   animation-name: SlideIn1;
 
@@ -117,7 +123,7 @@ const SlideIn1 = styled.div`
     }
   }
 `;
-const SlideIn2 = styled.div`
+const SlideIn2 = Styled.div`
   animation-duration: 3s;
   animation-name: SlideIn2;
 
@@ -134,7 +140,7 @@ const SlideIn2 = styled.div`
     }
   }
 `;
-const SlideIcon1 = styled.div`
+const SlideIcon1 = Styled.div`
   animation-duration: 3.5s;
   animation-name: SlideIcon1;
 
@@ -147,7 +153,7 @@ const SlideIcon1 = styled.div`
     }
   }
 `;
-const SlideIcon2 = styled.div`
+const SlideIcon2 = Styled.div`
   animation-duration: 5.5s;
   animation-name: SlideIcon2;
 
@@ -160,7 +166,7 @@ const SlideIcon2 = styled.div`
     }
   }
 `;
-const SlideIcon3 = styled.div`
+const SlideIcon3 = Styled.div`
   animation-duration: 4.3s;
   animation-name: SlideIcon3;
 
@@ -173,7 +179,7 @@ const SlideIcon3 = styled.div`
     }
   }
 `;
-const HiddenMenu = styled.div`
+const HiddenMenu = Styled.div`
   animation-duration: 6s;
   animation-name: HiddenMenu;
 
@@ -188,4 +194,9 @@ const HiddenMenu = styled.div`
       opacity: 0.01;
     }
   }
+`;
+
+const LoginLogoImage = Styled.div`
+ height: 30vh
+ width: 30vw 
 `;

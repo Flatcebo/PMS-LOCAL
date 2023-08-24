@@ -1,16 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-    "./hooks/**/*.{js,ts,jsx,tsx}",
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './hooks/**/*.{js,ts,jsx,tsx}',
+    './data/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
       fontFamily: {
-        "Nanum-Gothic": ['"Nanum-Gothic-Coding"'],
+        Nanums: ['Nanum Gothic', 'sans-serif'],
+        Juas: ['Jua', 'sans-serif'],
       },
     },
   },
-  plugins: [require("tailwind-scrollbar-hide")],
-};
+  plugins: [require('tailwind-scrollbar-hide')],
+}

@@ -1,5 +1,5 @@
-import Notice from "@components/Notice";
-import React from "react";
+import Notice from '@components/Notice'
+import React from 'react'
 
 const PageNotice = () => {
   return (
@@ -8,7 +8,7 @@ const PageNotice = () => {
         <Notice />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default React.memo(PageNotice);
+export default React.memo(PageNotice)

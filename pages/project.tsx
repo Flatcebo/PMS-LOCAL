@@ -27,7 +27,8 @@ import { render } from "react-dom";
 import Messenger from "@components/Organization";
 import Styled from "styled-components";
 
-const Project = () => {
+const Project = (props: any) => {
+  const { printRef } = props;
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
 
@@ -52,6 +53,7 @@ const Project = () => {
   const onValid = async (validForm: ProjectForm) => {
     console.log(validForm);
 
+    /*
     await fetch("/api/admin", {
       method: "POST",
       headers: {
@@ -63,13 +65,13 @@ const Project = () => {
     })
       .then((response) => response.json())
       .then((data) => console.log(data));
-
+    */
     return;
   };
 
   const [checked, setChecked] = useState(false);
   const onChangeChecked = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
-    setChecked((any) => !any);
+    setChecked(any => !any);
   }, []);
 
   //프로젝트 추가
@@ -98,17 +100,19 @@ const Project = () => {
     [names, inputText, nextId]
   );
   render;
-  const namesList = names.map((name) => <li key={name.id}>{name.text}</li>);
+  const namesList = names.map(name => <li key={name.id}>{name.text}</li>);
 
   return (
     <div className="absolute h-full w-full bg-[#9a9a9a4b]">
       <PageLayout />
+
       <div className="absolute w-[87.2vw] h-[83vh] left-[15rem] top-[10.2em] font-Nanum-Gothic overflow-scroll scrollbar-hide">
-        <div className="absolute h-[83vh] w-full left-[5px]">
-          <div className="absolute top-[30px] left-[15px] h-[76vh] w-[200px] outline text-center outline-[#b6173f68] rounded-md bg-[white]">
-            <h1 className="text-[24px] outline outline-[#b6173f68] rounded-md ">
-              PROJECT LIST
-            </h1>
+        <div className="absolute h-[83vh] w-[30vw] left-[5px]">
+          <div
+            className="absolute top-[30px] left-[15px] h-[76vh] w-[200px] text-center rounded-md bg-[#ffffffee] shadow-md
+         shadow-[#1d1c1cdc]"
+          >
+            <h1 className="text-[24px] rounded-md ">PROJECT LIST</h1>
             <ul className="text-[18px] leading-10 ">
               {namesList}
               <li className="border-t-[3px] border-solid border-[#b6173f34] ">
@@ -293,19 +297,22 @@ const Project = () => {
                       </form>
                     </div>
                   </div>
-                  ;
                 </Popup>
               </li>
               <li className="border-t-[3px] border-solid border-[#b6173f34]"></li>
             </ul>
           </div>
-          <div className="absolute top-[30px] h-[77.2vh] w-[1420px] left-[230px] ">
-            <div className="inline-block h-[76vh] w-[400px] bg-[white]">
-              <div className="h-[514px] w-[400px] outline outline-[#b6173f68] rounded-md">
+          <div className="absolute top-[30px] h-[77.2vh] w-[1420px] left-[230px]">
+            <div
+              className="inline-block h-[76vh] w-[400px] bg-[#ffffffee] shadow-md 
+         shadow-[#1d1c1cdc] rounded-md"
+            >
+              <div className="h-[514px] w-[400px] rounded-md">
                 <h1 className="text-center text-[28px]">MAIN CHART</h1>
                 <ChartDoghnut />
               </div>
-              <div className="absolute bottom-[12px] h-[260px] w-[400px] outline outline-[#b6173f68] rounded-md">
+
+              <div className="absolute bottom-[12px] h-[260px] w-[400px] rounded-md">
                 <h1 className="text-[28px] text-center -mt-[2.5px]">
                   LINE CHART
                 </h1>
@@ -314,8 +321,11 @@ const Project = () => {
                   <li></li>
                 </ul>
               </div>
-              <div className="absolute top-0 left-[420px] h-[76vh] w-[1000px] outline outline-[#b6173f68] bg-[white] rounded-md">
-                <div className="inline-block h-[100%] w-[150px] outline outline-[#b6173f68] rounded-md text-center">
+              <div
+                className="absolute top-0 left-[420px] h-[76vh] w-[1000px] bg-[#ffffffee] shadow-md
+         shadow-[#1d1c1cdc] rounded-md"
+              >
+                <div className="inline-block h-[100%] w-[150px] rounded-md text-center">
                   <h1 className="text-[20px]">People LIST</h1>
 
                   <ul className="text-[18px]">
